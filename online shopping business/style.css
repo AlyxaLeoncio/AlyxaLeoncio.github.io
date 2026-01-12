@@ -1,0 +1,61 @@
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+header, footer {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.container {
+    display: flex;
+    min-height: 80vh;
+}
+
+nav {
+    width: 200px;
+    background-color: #e6e6e6;
+    padding: 20px;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8B4513;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+}
+
+.logo {
+    width: 90px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+.product-img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin-bottom: 10px;
+}

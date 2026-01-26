@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Shopping Cart</title>
+  <meta charset="utf-8" />
+  <title>Riverfolk Cafe - Cart</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<h1>Your Shopping Cart</h1>
-<ul id="cartItems"></ul>
-<p id="total"></p>
 
-<a href="payment.html">Proceed to Payment</a>
+<header class="site-header">
+  <div class="header-left">
+    <img src="logo.png" alt="Riverfolk Cafe Logo" class="logo" />
+    <h1>Riverfolk Cafe</h1>
+  </div>
+</header>
 
-<script src="script.js"></script>
+<div class="container">
+  <nav>
+<a href="login.html">Login</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="profile.html">Profile</a>
+<a href="product.html">Products</a>
+<a href="cart.html">Cart</a>
+  </nav>
+
+  <main>
+    <h2>Shopping Cart</h2>
+
+    <div id="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
+
+    <div class="cart-summary">
+      <p>Total: ₱<span id="cart-total">0</span></p>
+      <button type="button" id="checkout-btn">Checkout</button>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 Riverfolk Cafe</p>
+  <p>Contact: riverfolk@gmail.com</p>
+</footer>
+
 </body>
 </html>

@@ -14,24 +14,85 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* =====================
+   Base Styles & Typography
+===================== */
 body {
-    margin: 0;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     background-color: var(--bg-main);
     color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 /* =====================
    Header & Footer
 ===================== */
 header,
+.site-header {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 20px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-left h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
 footer {
     background-color: var(--primary);
     color: var(--text-light);
     text-align: center;
     padding: 24px 10px;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
 }
 
 /* =====================
@@ -58,13 +119,20 @@ nav a {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95rem;
     border-radius: 6px;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
 }
 
 nav a:hover {
     background-color: var(--primary-dark);
     transform: translateX(4px);
+}
+
+nav a.active {
+    background-color: var(--primary);
+    border-left: 4px solid var(--text-light);
 }
 
 /* =====================
@@ -73,6 +141,50 @@ nav a:hover {
 main {
     flex: 1;
     padding: 40px;
+    max-width: 1200px;
+}
+
+/* =====================
+   Buttons
+===================== */
+button,
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--bg-sidebar);
+    color: var(--text-light);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
 }
 
 /* =====================
@@ -92,13 +204,119 @@ main {
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
+.product h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.product p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+.product .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+/* =====================
+   Forms
+===================== */
+input,
+textarea,
+select {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+/* =====================
+   Cart Styles
+===================== */
+.cart-item-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.item-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.cart-item-subtotal {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: -0.3px;
+}
+
+.summary-row {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.summary-total {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.qty-btn {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--primary);
+    background: var(--card-bg);
+    color: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+    background: var(--primary);
+    color: var(--text-light);
+}
+
+.remove-item-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--primary);
+    color: var(--text-light);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.remove-item-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
 /* =====================
    Images
 ===================== */
 .logo {
-    width: 90px;
+    width: 60px;
+    height: 60px;
     display: block;
-    margin: 0 auto 15px;
 }
 
 .product-img {
@@ -113,19 +331,83 @@ main {
    Responsive Design
 ===================== */
 @media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
     .container {
         flex-direction: column;
     }
 
+    header,
+    .site-header {
+        padding: 15px 20px;
+    }
+
+    .header-left {
+        gap: 12px;
+    }
+
+    .header-left h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
     nav {
         width: 100%;
-        text-align: center;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
     }
 
     nav a {
         display: inline-block;
-        margin: 8px;
+        margin: 0;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    nav a:hover {
         transform: none;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .product .price {
+        font-size: 1.3rem;
     }
 }
 
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

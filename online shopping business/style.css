@@ -2,14 +2,14 @@
    Global Reset & Theme
 ===================== */
 :root {
-    --primary: #8B4513;
-    --primary-dark: #6f360f;
-    --bg-main: #f4f4f4;
-    --bg-sidebar: #2f2f2f;
-    --text-dark: #333;
-    --text-light: #ffffff;
-    --card-bg: #ffffff;
-    --border-soft: #e0e0e0;
+    --primary: #1a1a1a;         
+    --primary-dark: #000000;     
+    --bg-main: #e8dcc8;           
+    --bg-sidebar: #2a2520;        
+    --text-dark: #1a1a1a;        
+    --text-light: #ffffff;       
+    --card-bg: #f5ede0;           
+    --border-soft: #d4c4ad;       
 }
 
 * {
@@ -128,3 +128,4 @@ main {
         transform: none;
     }
 }
+

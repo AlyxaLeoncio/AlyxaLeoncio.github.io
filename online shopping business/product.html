@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Riverfolk Cafe</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+<img src="logo.png" alt="Riverfolk Cafe Logo" class="logo" />
+<h1>Riverfolk Cafe</h1>
+</header>
+
+<nav class="site-nav">
+<a href="login.html">Login</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="profile.html">Profile</a>
+<a href="cart.html">Cart</a>
+</nav>
+
+<main class="container">
+<h2>Our Products</h2>
+
+<div class="product-grid">
+
+<div class="product">
+<img src="latte.jpg" alt="Latte" width="200" />
+<h3>Latte</h3>
+<p>₱125</p>
+<button type="button" onclick="addToCart('Latte', 125)">
+Add to Cart
+</button>
+</div>
+
+<div class="product">
+<img src="iced-coffee.jpg" alt="Iced Coffee" width="200" />
+<h3>Iced Coffee</h3>
+<p>₱125</p>
+<button type="button" onclick="addToCart('Iced Coffee', 125)">
+Add to Cart
+</button>
+</div>
+
+</div>
+
+<p class="cart-link">
+<a href="cart.html">Go to Cart</a>
+</p>
+</main>
+
+<footer>
+<p>© 2026 Riverfolk Cafe</p>
+<p>Contact: riverfolk@gmail.com</p>
+</footer>
+
+</body>
+</html>

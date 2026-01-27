@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - Riverfolk Cafe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <img src="logo.png" alt="Riverfolk Cafe Logo" class="logo" />
+    <h1>Riverfolk Cafe</h1>
+  </div>
+</header>
+
+<div class="container">
+
+  <nav>
+    <a href="login.html">Login</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="profile.html">Profile</a>
+    <a href="product.html">Products</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+
+
+  <main>
+    <h2>Checkout</h2>
+
+    <div class="checkout-container">
+
+      <div class="checkout-section">
+        <h3>Order Summary</h3>
+        <div id="checkout-items" class="checkout-items">
+
+        </div>
+        <div class="order-totals">
+          <div class="total-row">
+            <span>Subtotal:</span>
+            <span>₱<span id="checkout-subtotal">0.00</span></span>
+          </div>
+          <div class="total-row">
+            <span>Tax (12%):</span>
+            <span>₱<span id="checkout-tax">0.00</span></span>
+          </div>
+          <div class="total-row">
+            <span>Delivery Fee:</span>
+            <span>₱<span id="delivery-fee">0.00</span></span>
+          </div>
+          <div class="total-row total-final">
+            <strong>Total:</strong>
+            <strong>₱<span id="checkout-total">0.00</span></strong>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="checkout-section">
+        <h3>Delivery Information</h3>
+        <form id="delivery-form">
+          <div class="form-group">
+            <label for="full-name">Full Name *</label>
+            <input type="text" id="full-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Delivery Address *</label>
+            <textarea id="address" rows="3" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Delivery Notes (Optional)</label>
+            <textarea id="notes" rows="2" placeholder="e.g., Leave at door, Ring doorbell"></textarea>
+          </div>
+        </form>
+      </div>
+
+      <!-- Delivery Options -->
+      <div class="checkout-section">
+        <h3>Delivery Options</h3>
+        <div class="delivery-options">
+          <label class="delivery-option">
+            <input type="radio" name="delivery" value="standard" checked />
+            <div class="option-content">
+              <div class="option-info">
+                <strong>Standard Delivery</strong>
+                <p>Delivery in 45-60 minutes</p>
+              </div>
+              <span class="option-price">₱50.00</span>
+            </div>
+          </label>
+
+          <label class="delivery-option">
+            <input type="radio" name="delivery" value="express" />
+            <div class="option-content">
+              <div class="option-info">
+                <strong>Express Delivery</strong>
+                <p>Delivery in 20-30 minutes</p>
+              </div>
+              <span class="option-price">₱100.00</span>
+            </div>
+          </label>
+
+          <label class="delivery-option">
+            <input type="radio" name="delivery" value="pickup" />
+            <div class="option-content">
+              <div class="option-info">
+                <strong>Pickup</strong>
+                <p>Pick up at store in 15-20 minutes</p>
+              </div>
+              <span class="option-price">Free</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="checkout-section">
+        <h3>Payment Method</h3>
+        <div class="payment-methods">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="cod" checked />
+            <div class="option-content">
+              <div class="option-info">
+                <strong>Cash on Delivery</strong>
+                <p>Pay when your order arrives</p>
+              </div>
+            </div>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" name="payment" value="gcash" />
+            <div class="option-content">
+              <div class="option-info">
+                <strong>GCash</strong>
+                <p>Pay securely with GCash</p>
+              </div>
+            </div>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" name="payment" value="card" />
+            <div class="option-content">
+              <div class="option-info">
+                <strong>Credit/Debit Card</strong>
+                <p>Visa, Mastercard, JCB</p>
+              </div>
+            </div>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" name="payment" value="bank" />
+            <div class="option-content">
+              <div class="option-info">
+                <strong>Bank Transfer</strong>
+                <p>Direct bank transfer</p>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Place Order Button -->
+      <div class="checkout-actions">
+        <a href="cart.html" class="btn btn-secondary">Back to Cart</a>
+        <a href="confirmation.html" class="btn btn-secondary">Place Order</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 Riverfolk Cafe</p>
+  <p>Contact: riverfolk@gmail.com</p>
+</footer>
+
+<script src="checkout.js"></script>
+
+</body>
+</html>

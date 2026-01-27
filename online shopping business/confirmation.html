@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Confirmation - Riverfolk Cafe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <img src="logo.png" alt="Riverfolk Cafe Logo" class="logo" />
+    <h1>Riverfolk Cafe</h1>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Sidebar Navigation -->
+  <nav>
+    <a href="login.html">Login</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="profile.html">Profile</a>
+    <a href="product.html">Products</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="confirmation-container">
+      <div class="confirmation-header">
+        <div class="success-icon">✓</div>
+        <h2>Order Confirmed!</h2>
+        <p>Thank you for your order. Your order has been received and is being prepared.</p>
+      </div>
+
+      <div class="receipt">
+        <div class="receipt-header">
+          <h3>E-Receipt</h3>
+          <p class="order-number">Order #<span id="order-number">000000</span></p>
+          <p class="order-date" id="order-date"></p>
+        </div>
+
+        <!-- Customer Information -->
+        <div class="receipt-section">
+          <h4>Customer Information</h4>
+          <div class="info-row">
+            <span class="info-label">Name:</span>
+            <span id="customer-name">-</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Phone:</span>
+            <span id="customer-phone">-</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Email:</span>
+            <span id="customer-email">-</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Address:</span>
+            <span id="customer-address">-</span>
+          </div>
+        </div>
+
+        <!-- Order Items -->
+        <div class="receipt-section">
+          <h4>Order Items</h4>
+          <div id="receipt-items">
+            <!-- Items will be loaded here -->
+          </div>
+        </div>
+
+        <!-- Delivery & Payment Info -->
+        <div class="receipt-section">
+          <h4>Delivery & Payment</h4>
+          <div class="info-row">
+            <span class="info-label">Delivery Option:</span>
+            <span id="delivery-option">-</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Payment Method:</span>
+            <span id="payment-method">-</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Estimated Delivery:</span>
+            <span id="estimated-delivery">-</span>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="receipt-section">
+          <div class="receipt-totals">
+            <div class="total-row">
+              <span>Subtotal:</span>
+              <span>₱<span id="receipt-subtotal">0.00</span></span>
+            </div>
+            <div class="total-row">
+              <span>Tax (12%):</span>
+              <span>₱<span id="receipt-tax">0.00</span></span>
+            </div>
+            <div class="total-row">
+              <span>Delivery Fee:</span>
+              <span>₱<span id="receipt-delivery">0.00</span></span>
+            </div>
+            <div class="total-row total-final">
+              <strong>Total Paid:</strong>
+              <strong>₱<span id="receipt-total">0.00</span></strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="confirmation-footer">
+        <p>We'll send you updates about your order via email and SMS.</p>
+        <p>Questions? Contact us at <strong>riverfolk@gmail.com</strong> or <strong>(02) 1234-5678</strong></p>
+        <a href="product.html" class="btn btn-primary">Continue Shopping</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 Riverfolk Cafe</p>
+  <p>Contact: riverfolk@gmail.com</p>
+</footer>
+
+<script src="confirmation.js"></script>
+
+</body>
+</html>
